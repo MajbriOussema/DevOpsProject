@@ -36,6 +36,14 @@ public class Student {
         this.id = id;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
     public Student(String name) {
         this.name = name;
     }
