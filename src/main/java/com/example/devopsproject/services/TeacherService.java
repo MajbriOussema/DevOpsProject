@@ -10,26 +10,26 @@ import java.util.Optional;
 @Service
 public class TeacherService {
     @Autowired
-    TeacherRepository ownerRepository;
+    TeacherRepository teacherRepository;
 
-    public Teacher createTeacher(Teacher owner) throws Exception {
+    public Teacher createTeacher(Teacher teacher) throws Exception {
 
-        Teacher createdTeacher = this.ownerRepository.save(owner);
+        Teacher createdTeacher = this.teacherRepository.save(teacher);
         return createdTeacher;
     }
 
     public List<Teacher> getAllTeachers() throws Exception {
 
-        List<Teacher> owners = this.ownerRepository.findAll();
-        return owners;
+        List<Teacher> teachers = this.teacherRepository.findAll();
+        return teachers;
     }
 
-    public Teacher getTeacherById(Long ownerId) throws Exception {
+    public Teacher getTeacherById(Long teacherId) throws Exception {
 
-        Optional<Teacher> ownerData = this.ownerRepository.findById(ownerId);
-        if(ownerData.isPresent()){
-            Teacher owner = ownerData.orElseThrow(()-> new Exception("owner not found"));
-            return owner;
+        Optional<Teacher> teacherData = this.teacherRepository.findById(teacherId);
+        if(teacherData.isPresent()){
+            Teacher teacher = teacherData.orElseThrow(()-> new Exception("teacher not found"));
+            return teacher;
         }else{
             throw new  Exception("Teacher with this Id not found");
         }
