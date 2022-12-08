@@ -1,19 +1,24 @@
+def gv
+
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+    }
     stages {
-        stage ('GIT') {
+        stage("initialize") {
             steps {
-                echo "Getting Project from Git";
-                git "https://github.com/MajbriOussema/DevOpsProject"; 
-            } 
-        }
-        stage ('MAVEN') {
-            steps {
-                echo "Maven Clean";
-                sh 'mvn clean';
-                echo "Maven Test";
-                sh 'mvn test';
+                script {
+                    gv = load "scripts.groovy"
+                }
             }
         }
+        stage("cloning git") {
+            steps {
+                script { 
+                    gv.git_clone()
+                }
+            }
+        } 
     }
 }
