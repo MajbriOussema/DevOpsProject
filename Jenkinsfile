@@ -7,11 +7,13 @@ pipeline {
                 git "https://github.com/MajbriOussema/DevOpsProject"; 
             } 
         }
-        stage ('MVN CLEAN') {
+        stage ('MAVEN') {
             steps {
                 echo "Maven Clean";
                 sh 'mvn clean';
-            } 
+                echo "Maven Test";
+                sh 'mvn test';
+            }
         }
     }
 }
