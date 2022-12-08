@@ -6,6 +6,12 @@ pipeline {
                 echo "Getting Project from Git";
                 git "https://github.com/MajbriOussema/DevOpsProject"; 
             } 
-         }
+        }
+        stage ('MVN CLEAN') {
+            steps {
+                echo "Maven Clean";
+                bat 'mvn clean';
+            } 
+        }
     }
 }
