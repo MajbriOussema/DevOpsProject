@@ -10,7 +10,7 @@ pipeline {
         stage ('MVN CLEAN') {
             steps {
                 echo "Maven Clean";
-                bat 'mvn clean';
+                sh 'mvn clean';
             } 
         }
     }
