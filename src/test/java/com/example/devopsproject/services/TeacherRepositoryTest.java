@@ -13,7 +13,6 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.devopsproject.models.Student;
 import com.example.devopsproject.models.Teacher;
 import com.example.devopsproject.repositories.TeacherRepository;
 

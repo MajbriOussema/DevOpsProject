@@ -1,8 +1,6 @@
 package com.example.devopsproject.controllers;
 
-import com.example.devopsproject.models.Teacher;
 import com.example.devopsproject.models.Student;
-import com.example.devopsproject.services.TeacherService;
 import com.example.devopsproject.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
