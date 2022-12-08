@@ -16,6 +16,13 @@ pipeline {
                     gv.git_clone()
                 }
             }
-        } 
+        }
+        stage("Sonarqube Scan") {
+            steps {
+                script { 
+                    gv.sonarqube_scan()
+                }
+            }
+        }  
     }
 }
