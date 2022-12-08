@@ -17,6 +17,13 @@ pipeline {
                 }
             }
         }
+        stage("Run unit tests") {
+            steps {
+                script { 
+                    gv.run_unit_tests()
+                }
+            }
+        }
         stage("Sonarqube Scan") {
             steps {
                 script { 
