@@ -38,5 +38,13 @@ pipeline {
                 }
             }
         }    
+        stage("Docker build") {
+            steps {
+                script { 
+                    gv.build_docker_image()
+                }
+            }
+        }
+        
     }
 }
