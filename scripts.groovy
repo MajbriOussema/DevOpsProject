@@ -12,6 +12,6 @@ def sonarqube_scan(){
         -Dsonar.password=oussema"
 }
 def nexus_deploy(){
-    sh "mv clean deploy"
+    sh "mvn clean package deploy"
 }
 return this
