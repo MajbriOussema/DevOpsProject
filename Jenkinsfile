@@ -45,6 +45,12 @@ pipeline {
                 }
             }
         }
-        
+        stage("deploy application") {
+            steps {
+                script { 
+                    gv.deploy()
+                }
+            }
+        }
     }
 }

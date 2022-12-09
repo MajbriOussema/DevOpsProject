@@ -14,4 +14,7 @@ def nexus_deploy(){
 def build_docker_image(){
     sh "docker build -t devopsproject ."
 }
+def deploy(){
+    sh "docker-compose up"
+}
 return this
