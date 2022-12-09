@@ -15,6 +15,6 @@ def build_docker_image(){
     sh "docker build -t devopsproject ."
 }
 def deploy(){
-    sh "docker-compose up"
+    sh "docker-compose up -d"
 }
 return this
