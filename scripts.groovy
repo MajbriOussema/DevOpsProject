@@ -1,6 +1,12 @@
 def git_clone(){
     git "https://github.com/MajbriOussema/DevOpsProject"
 }
+def build_docker_image(){
+    sh "docker build -t devopsproject ."
+}
+def deploy(){
+    sh "docker-compose up -d"
+}
 def run_unit_tests(){
     sh "mvn clean"
     sh "mvn test"

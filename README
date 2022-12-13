@@ -1,0 +1,14 @@
+Github repo: https://github.com/MajbriOussema/DevOpsProject
+
+The project is about creating and building a pipeline using JENKINS.	
+
+the process of the pipeline:
+- clone the code from the github repo
+- run quality tests using Sonarqube
+- run unit tests
+- build the jar and push it to Nexus repository
+- build the docker image for the backend and database applications
+- run both images using docker-compose to deploy it in the server
+
+All the process of the pipeline was tested on local environment ( no remote servers were used )
+ 
